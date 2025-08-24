@@ -1,0 +1,19 @@
+name: Workflow QA
+
+# Executa apenas na branch QA
+on:
+  push:
+    branches:
+      - QA
+
+jobs:
+  qa_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: |
+          echo "Usando a Branch de QA"
+          echo "EU AMO DEVOPS"
